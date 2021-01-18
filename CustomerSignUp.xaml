@@ -1,0 +1,88 @@
+﻿<ContentDialog
+    x:Class="LibraryApp.CustomerSignUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="SIGN UP"
+    PrimaryButtonText="CANCEL"
+    SecondaryButtonText="SIGN UP"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick" Background="Brown">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="You Wish to Sign up as?" Width="80" TextWrapping="Wrap" Margin="10,20,0,0"/>
+                <ComboBox Margin="20" 
+                              x:Name="accountComboBox" 
+                              SelectionChanged="accountComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Customer"/>
+                    <ComboBoxItem Content="Student"/>
+                    <ComboBoxItem Content="Administrator"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel x:Name="Selected1" Visibility="Collapsed">
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="Customer Id  "/>
+                    <TextBox x:Name="customerIdBox" Background="Yellow" Width="150" />
+                </StackPanel>
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="SurName"/>
+                    <TextBox x:Name="surNameIdBox" CornerRadius="10" Margin="15,0,0,0" Background="Yellow" Width="150" />
+                </StackPanel>
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="Other Names" Width="55" TextWrapping="Wrap"/>
+                    <TextBox x:Name="otherNameIdBox" CornerRadius="10" Margin="15,0,0,0" Background="Yellow" Width="150" />
+                </StackPanel>
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="Email"/>
+                    <TextBox x:Name="emailIdBox" CornerRadius="10" Margin="25,0,0,0" Background="Yellow" Width="150" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="Selected2" Visibility="Collapsed">
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="SurName" Margin="0,0,10,0"/>
+                    <TextBox Background="Yellow" CornerRadius="10" Width="150" />
+                </StackPanel>
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="Other Names" Width="60" TextWrapping="Wrap" Margin="0,0,10,0"/>
+                    <TextBox Background="Yellow" CornerRadius="10" Width="150" />
+                </StackPanel>
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="School" Width="60" TextWrapping="Wrap" Margin="0,0,10,0"/>
+                    <TextBox Background="Yellow" CornerRadius="10" Width="150" />
+                </StackPanel>
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="Class" Width="60" TextWrapping="Wrap" Margin="0,0,10,0"/>
+                    <ComboBox>
+                        <ComboBoxItem Content="Class 1" IsSelected="True" />
+                        <ComboBoxItem Content="Class 2"/>
+                        <ComboBoxItem Content="Class 3"/>
+                        <ComboBoxItem Content="Class 4"/>
+                        <ComboBoxItem Content="Class 5"/>
+                        <ComboBoxItem Content="Class 6"/>
+                        <ComboBoxItem Content="Class 7"/>
+                        <ComboBoxItem Content="Class 8"/>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="Selected3" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Enter Admin Id" />
+                    <TextBox  Width="150" Margin="10,0,0,0" CornerRadius="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Enter User Name" />
+                    <TextBox  Width="150" CornerRadius="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Enter Password" Margin="0,0,8,0" />
+                    <TextBox  Width="150" CornerRadius="10"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</ContentDialog>

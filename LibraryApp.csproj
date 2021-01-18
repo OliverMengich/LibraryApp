@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{224B549B-2169-4561-87BC-1B267268D2A7}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibraryApp</RootNamespace>
+    <AssemblyName>LibraryApp</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AccountsPage.xaml.cs">
+      <DependentUpon>AccountsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BooksPage.xaml.cs">
+      <DependentUpon>BooksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSignUp.xaml.cs">
+      <DependentUpon>CustomerSignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Image.xaml.cs">
+      <DependentUpon>Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginContentDialog.xaml.cs">
+      <DependentUpon>LoginContentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogOutPage.xaml.cs">
+      <DependentUpon>LogOutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="obj\ARM\Debug\.NETCore,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\ARM\Debug\App.g.cs" />
+    <Compile Include="obj\x86\Debug\.NETCore,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\x86\Debug\AccountsPage.g.cs" />
+    <Compile Include="obj\x86\Debug\AccountsPage.g.i.cs" />
+    <Compile Include="obj\x86\Debug\App.g.cs" />
+    <Compile Include="obj\x86\Debug\App.g.i.cs" />
+    <Compile Include="obj\x86\Debug\BooksPage.g.cs" />
+    <Compile Include="obj\x86\Debug\BooksPage.g.i.cs" />
+    <Compile Include="obj\x86\Debug\CustomerSignUp.g.cs" />
+    <Compile Include="obj\x86\Debug\CustomerSignUp.g.i.cs" />
+    <Compile Include="obj\x86\Debug\HomePage.g.cs" />
+    <Compile Include="obj\x86\Debug\HomePage.g.i.cs" />
+    <Compile Include="obj\x86\Debug\Image.g.cs" />
+    <Compile Include="obj\x86\Debug\Image.g.i.cs" />
+    <Compile Include="obj\x86\Debug\LoginContentDialog.g.cs" />
+    <Compile Include="obj\x86\Debug\LoginContentDialog.g.i.cs" />
+    <Compile Include="obj\x86\Debug\LogOutPage.g.cs" />
+    <Compile Include="obj\x86\Debug\LogOutPage.g.i.cs" />
+    <Compile Include="obj\x86\Debug\MainPage.g.cs" />
+    <Compile Include="obj\x86\Debug\MainPage.g.i.cs" />
+    <Compile Include="obj\x86\Debug\ReportsPage.g.cs" />
+    <Compile Include="obj\x86\Debug\ReportsPage.g.i.cs" />
+    <Compile Include="obj\x86\Debug\XamlTypeInfo.g.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsPage.xaml.cs">
+      <DependentUpon>ReportsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\image1.jpg" />
+    <Content Include="bin\x86\Debug\AppxManifest.xml" />
+    <Content Include="bin\x86\Debug\AppX\AppxManifest.xml" />
+    <Content Include="bin\x86\Debug\AppX\Assets\image1.jpg" />
+    <Content Include="bin\x86\Debug\AppX\Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\SplashScreen.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\StoreLogo.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\entrypoint\LibraryApp.exe" />
+    <Content Include="bin\x86\Debug\AppX\LibraryApp.exe" />
+    <Content Include="bin\x86\Debug\AppX\LibraryApp.xr.xml" />
+    <Content Include="bin\x86\Debug\AppX\Properties\Default.rd.xml" />
+    <Content Include="bin\x86\Debug\AppX\SQLite.Interop.dll" />
+    <Content Include="bin\x86\Debug\AppX\System.Data.SQLite.dll" />
+    <Content Include="bin\x86\Debug\AppX\System.Runtime.dll" />
+    <Content Include="bin\x86\Debug\Core\AppxManifest.xml" />
+    <Content Include="bin\x86\Debug\Core\LibraryApp.exe" />
+    <Content Include="bin\x86\Debug\LibraryApp.exe" />
+    <Content Include="bin\x86\Debug\LibraryApp.pdb" />
+    <Content Include="bin\x86\Debug\LibraryApp.xr.xml" />
+    <Content Include="bin\x86\Debug\SQLite.Interop.dll" />
+    <Content Include="bin\x86\Debug\System.Data.SQLite.dll" />
+    <Content Include="bin\x86\Debug\System.Runtime.dll" />
+    <Content Include="obj\ARM\Debug\XamlSaveStateFile.xml" />
+    <Content Include="obj\x86\Debug\intermediatexaml\LibraryApp.exe" />
+    <Content Include="obj\x86\Debug\intermediatexaml\LibraryApp.pdb" />
+    <Content Include="obj\x86\Debug\LibraryApp.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\LibraryApp.exe" />
+    <Content Include="obj\x86\Debug\LibraryApp.pdb" />
+    <Content Include="obj\x86\Debug\LibraryApp.xr.xml" />
+    <Content Include="obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt" />
+    <Content Include="obj\x86\Debug\priconfig.xml" />
+    <Content Include="obj\x86\Debug\ProjectArchitectures.txt" />
+    <Content Include="obj\x86\Debug\qualifiers.txt" />
+    <Content Include="obj\x86\Debug\XamlSaveStateFile.xml" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AccountsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BooksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerSignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginContentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogOutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\AccountsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\BooksPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\CustomerSignUp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\Image.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\LoginContentDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\LogOutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="obj\x86\Debug\ReportsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ReportsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite">
+      <Version>1.0.113.7</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x86\Debug\AccountsPage.xbf" />
+    <None Include="bin\x86\Debug\App.xbf" />
+    <None Include="bin\x86\Debug\AppX\AccountsPage.xbf" />
+    <None Include="bin\x86\Debug\AppX\App.xbf" />
+    <None Include="bin\x86\Debug\AppX\BooksPage.xbf" />
+    <None Include="bin\x86\Debug\AppX\CustomerSignUp.xbf" />
+    <None Include="bin\x86\Debug\AppX\HomePage.xbf" />
+    <None Include="bin\x86\Debug\AppX\Image.xbf" />
+    <None Include="bin\x86\Debug\AppX\LoginContentDialog.xbf" />
+    <None Include="bin\x86\Debug\AppX\LogOutPage.xbf" />
+    <None Include="bin\x86\Debug\AppX\MainPage.xbf" />
+    <None Include="bin\x86\Debug\AppX\Microsoft.UI.Xaml.Markup.winmd" />
+    <None Include="bin\x86\Debug\AppX\ReportsPage.xbf" />
+    <None Include="bin\x86\Debug\AppX\resources.pri" />
+    <None Include="bin\x86\Debug\AppX\vs.appxrecipe" />
+    <None Include="bin\x86\Debug\AppX\WinMetadata\Windows.winmd" />
+    <None Include="bin\x86\Debug\BooksPage.xbf" />
+    <None Include="bin\x86\Debug\CustomerSignUp.xbf" />
+    <None Include="bin\x86\Debug\HomePage.xbf" />
+    <None Include="bin\x86\Debug\Image.xbf" />
+    <None Include="bin\x86\Debug\LibraryApp.build.appxrecipe" />
+    <None Include="bin\x86\Debug\LoginContentDialog.xbf" />
+    <None Include="bin\x86\Debug\LogOutPage.xbf" />
+    <None Include="bin\x86\Debug\MainPage.xbf" />
+    <None Include="bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd" />
+    <None Include="bin\x86\Debug\ReportsPage.xbf" />
+    <None Include="bin\x86\Debug\resources.pri" />
+    <None Include="obj\ARM\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\LibraryApp.csproj.nuget.dgspec.json" />
+    <None Include="obj\LibraryApp.csproj.nuget.g.props" />
+    <None Include="obj\LibraryApp.csproj.nuget.g.targets" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\x86\Debug\.winmd_cache\%24Microsoft.UI.Xaml.Markup.winmd_636885202160000000.json" />
+    <None Include="obj\x86\Debug\AccountsPage.xbf" />
+    <None Include="obj\x86\Debug\App.xbf" />
+    <None Include="obj\x86\Debug\BooksPage.xbf" />
+    <None Include="obj\x86\Debug\CustomerSignUp.xbf" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug\embed\embed.resfiles" />
+    <None Include="obj\x86\Debug\embed\embed.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\excluded.layout.resfiles" />
+    <None Include="obj\x86\Debug\excluded.layout.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\filtered.layout.resfiles" />
+    <None Include="obj\x86\Debug\filtered.layout.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\HomePage.xbf" />
+    <None Include="obj\x86\Debug\Image.xbf" />
+    <None Include="obj\x86\Debug\LibraryApp.csproj.CopyComplete" />
+    <None Include="obj\x86\Debug\LibraryApp.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug\LibraryApp.csprojAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\LoginContentDialog.xbf" />
+    <None Include="obj\x86\Debug\LogOutPage.xbf" />
+    <None Include="obj\x86\Debug\MainPage.xbf" />
+    <None Include="obj\x86\Debug\pri.resfiles" />
+    <None Include="obj\x86\Debug\pri.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\priconfig.xml.intermediate" />
+    <None Include="obj\x86\Debug\qualifiers.txt.intermediate" />
+    <None Include="obj\x86\Debug\ReportsPage.xbf" />
+    <None Include="obj\x86\Debug\ResourceHandlingTask.state" />
+    <None Include="obj\x86\Debug\resources.en.resfiles" />
+    <None Include="obj\x86\Debug\resources.en.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\resources.resfiles" />
+    <None Include="obj\x86\Debug\resources.resfiles.intermediate" />
+    <PRIResource Include="obj\x86\Debug\System.Data.SQLite\en\System.Data.SQLite.SR.resw" />
+    <None Include="obj\x86\Debug\unfiltered.layout.resfiles" />
+    <None Include="obj\x86\Debug\unfiltered.layout.resfiles.intermediate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\ARM64\Debug\" />
+    <Folder Include="bin\ARM64\Release\" />
+    <Folder Include="bin\ARM\Debug\" />
+    <Folder Include="bin\ARM\Release\" />
+    <Folder Include="bin\x64\Debug\" />
+    <Folder Include="bin\x64\Release\" />
+    <Folder Include="bin\x86\Release\" />
+    <Folder Include="obj\ARM\Debug\intermediatexaml\" />
+    <Folder Include="obj\ARM\Debug\TempPE\" />
+    <Folder Include="obj\x86\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

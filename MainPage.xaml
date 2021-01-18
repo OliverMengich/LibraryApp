@@ -1,0 +1,138 @@
+﻿<Page
+    x:Class="LibraryApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"  Background="#FFB97B4E">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="LOGIN" 
+                FontSize="24"
+                x:Name="loginButton"
+                Click="loginButton_Click"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Foreground="White"/>
+        <Border Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Background="#FF1D975F"/>
+        <Button Content="SIGN UP"
+                x:Name="SignUpButton"
+                Click="SignUpButton_Click"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Foreground="White"
+                Grid.Column="4"/>
+        <StackPanel Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="30">
+            <HyperlinkButton Content="About Us"
+                         Foreground="Brown"
+                         FontSize="30"
+                         BorderBrush="Brown"/>
+            <Image Source="Assets/image1.jpg"
+                   HorizontalAlignment="Left"
+                   Width="340"
+                   Height="200"/>
+            <TextBlock Text="Textbook lending saves you truckloads"
+                       TextWrapping="Wrap"
+                       Margin="0,10,0,10"
+                       FontSize="16"
+                       Foreground="Green"/>
+            <TextBlock Text="Think textbooks are expensive? So do we. We Help you lend you textbooks online and quickly deliver them right to your door for a fraction of the cost of purchasing them new. After all, you have better things to do with your money"
+                       TextWrapping="Wrap" />
+            <TextBlock Text="Business Hours"
+                       Foreground="Green"
+                       Margin="0,10,0,10"
+                       FontSize="16"/>
+            <TextBlock Text="The library is open from 8:00 am to 6:00 pm Monday to Friday and 9:00 am to 4:00pm on Sartudays"
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+        
+        <!--<Rectangle StrokeDashArray="1.0 1.0"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="4"
+                   VerticalAlignment="Top"
+                   Margin="50,90,20,0"
+                   x:Name="RedRect"
+                   Stroke="Red"
+                   StrokeThickness="2"
+                   MaxWidth="800"
+                   Height="500">
+            
+        </Rectangle>-->
+        <TextBlock Text="My Account"
+                   Grid.Column="2"
+                   Margin="10"
+                   Foreground="Brown"
+                   Grid.Row="1"
+                   FontSize="16"/>
+        <Grid Grid.Row="1"
+              Margin="50"
+              Grid.ColumnSpan="3"
+              Grid.Column="2">
+            <StackPanel>
+                <Button Content="login to your account"
+                   Foreground="White"
+                   Background="Brown"
+                   Grid.Column="2"
+                   Grid.Row="1"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   />
+                <TextBlock Text="please enter valid details of your account to login to the full website if you dont have have an  account click"
+                       Foreground="Green"
+                       Margin="20"
+                       Grid.Row="1"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Username" Margin="20"/>
+                    <TextBox Height="30"
+                             x:Name="UserNameTextBox"
+                             Width="300"
+                             Background="Yellow"
+                             CornerRadius="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Password" Margin="20"/>
+                    <TextBox Height="30"
+                             x:Name="passwordTextBox"
+                             Width="300"
+                             Background="Yellow"
+                             CornerRadius="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Account" Margin="20"/>
+                    <ComboBox Margin="20" 
+                              x:Name="accountComboBox" 
+                              SelectionChanged="accountComboBox_SelectionChanged">
+                        <ComboBoxItem Content="Customer"/>
+                        <ComboBoxItem Content="Student"/>
+                        <ComboBoxItem Content="Administator"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <Button Content="Login" Foreground="White" Margin="20" Name="login" Click="loginButton_Click" CornerRadius="5"/>
+                <TextBlock Margin="20,1,0,0" FontWeight="Bold">dont have account <Hyperlink Foreground="Yellow">Sign Up</Hyperlink> Here</TextBlock>
+                <TextBlock Text ="Olver" Name="ResultTextBlock"
+                           FontSize="24"/>
+            </StackPanel>
+            
+
+        </Grid>
+
+    </Grid>
+</Page>
